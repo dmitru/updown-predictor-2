@@ -1,0 +1,56 @@
+# config.txt
+
+# Uncomment the next line to put the output to the file
+# output_filename = results.txt
+
+learn = 1:196 ,  201:206
+predict = 197:200
+columns_num = 3
+columns_ys = 1
+
+compute_scalers = on
+unit_step = 0.01
+
+# Начальное количество точек-направлений
+directions_initial_num = 480
+# Приращение количества точек-направлений
+directions_increase = 0.1
+# Число лучших точек-направлений с предыдущего шага
+directions_best_from_prev_step = 15
+
+lowest_scaler_bound = 0.2
+use_squares_of_deltas = on
+
+prescalers = 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+
+normalizing = on
+normalize_by_mean_distance = on
+extended = on
+
+input_filename = train.txt
+input_separator = tab
+output_filename = results.csv
+output_separator = tab
+output_numbers_use_comma = off
+output_print_header = on
+output_func_values = off
+output_weighted_sum_formula_results = on
+
+test_output = on
+test_output_filename = test_output.csv
+
+read_learn_data_from_file = off
+learn_data_filename = data_learn.csv
+
+use_reduction = on
+use_reduction_size = 60
+reduced_rows_filename = rows_used.csv
+
+debug = on
+
+y_min = -0.1
+y_max = 4
+y_step = 0.05
+y_pow = -2.0
+y_d = 0.005
+
