@@ -3,13 +3,26 @@
 # Uncomment the next line to put the output to the file
 # output_filename = results.txt
 
-learn = 1:196 ,  201:206
-predict = 197:200
-columns_num = 3
-columns_ys = 1
+use = 1:1000
 
-compute_scalers = on
+# Количествоыгиыш
+dimensions = 2
+
+###############################################
+# Опции первой фазы алгоритма (смещения точек)
+###############################################
+
+# Шаг смещения точек
 unit_step = 0.01
+
+# Максимальное количество шагов для одной точки
+max_steps_for_one_point = 100
+
+# Какое количество точек должно сместиться
+num_of_points_to_move = 100
+
+# Максимальное смещение для точек, с которым точка пройдет во вторую файзу алгоритма
+displacement_limit = 0.0
 
 # Начальное количество точек-направлений
 directions_initial_num = 480
@@ -18,29 +31,30 @@ directions_increase = 0.1
 # Число лучших точек-направлений с предыдущего шага
 directions_best_from_prev_step = 15
 
-lowest_scaler_bound = 0.2
-use_squares_of_deltas = on
+###############################################
+# Опции нормализации и прескалинга
+###############################################
 
 prescalers = 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
-
 normalizing = on
 normalize_by_mean_distance = on
-extended = on
 
-input_filename = train.txt
+###############################################
+# Опции ввода-вывода данных и результатов
+###############################################
+
+input_filename = input_data.txt
+new_data_filename = new_data.txt
+results_filename = results.csv
+new_results_filename = new_results.csv
+
 input_separator = tab
-output_filename = results.csv
-output_separator = tab
+output_separator = ;
 output_numbers_use_comma = off
 output_print_header = on
-output_func_values = off
-output_weighted_sum_formula_results = on
 
 test_output = on
 test_output_filename = test_output.csv
-
-read_learn_data_from_file = off
-learn_data_filename = data_learn.csv
 
 use_reduction = on
 use_reduction_size = 60
